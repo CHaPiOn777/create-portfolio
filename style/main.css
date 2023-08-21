@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --index: calc(1vh + 1vw);
+  --color-header: #f4efec;
+  --color-text: #cdc6c3;
+  --gap-item: calc(var(--index) * 4);
+}
+
+@font-face {
+  font-family: outfit-v;
+  src: url(../fonts/outfit-regular.woff2);
+}
+
+@font-face {
+  font-family: raleway-v;
+  src: url(../fonts/raleway-regular.woff2);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: outfit-v;
+  color: var(--color-header);
+}
+
+.root {
+  background-image: url(../img/bg.jpg);
+  background-size: 50px;
+  font-family: raleway-v;
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+.header-section {
+  overflow-x: hidden;
+  position: relative;
+  height: 100vh;
+}
+
+.header__hero-img {
+
+  position: absolute;
+  width: calc(var(--index) * 30);
+  top: 10vw;
+  left: 60vh;
+  @media screen and (max-width: 680px) {
+    top: 69vw;
+    left: 10vh;
+  }
+}
+
+.header__title {
+  position: absolute;
+  top: 35vw;
+  left: 8vh;
+  font-size: calc(var(--index) * 6.5);
+  width: min-content;
+  line-height: 0.9;
+}
+.main {
+  overflow-x: hidden;
+  margin: 0 auto;
+  justify-content: space-between;
+  display: flex;
+}
+.gallery {
+  display: flex;
+}
+.left-column {
+  padding: 0 calc(var(--index) * 2);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap-item) * 0.7);
+}
+
+.left-column .gallery__item {
+  margin: var(--gap-item) 0;
+  @media screen and (max-width: 680px) {
+    margin: calc(var(--gap-item) * 0.7) 0;
+  }
+}
+.right-column .gallery__item {
+  margin: calc(var(--gap-item) * 1.1) 0;
+  @media screen and (max-width: 680px) {
+    margin: calc(var(--gap-item) * 0.6) 0;
+  }
+}
+.right-column {
+  padding: 0 calc(var(--index) * 2);
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap-item) * 0.7);
+  @media screen and (max-width: 680px) {
+    gap: calc(var(--gap-item) * 0.4);
+  }
+}
+
+.info__text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  @media screen and (max-width: 680px) {
+    font-size: 0.5rem;
+    line-height: 1.2rem;
+  }
+}
+.info__title {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  @media screen and (max-width: 680px) {
+    font-size: 1.5rem;
+    line-height: 1.2rem;
+  }
+}
+
+.gallery__item {
+  max-width: calc(var(--index) * 21);
+  max-height: 60vh;
+  border-radius: 8px;
+  @media screen and (max-width: 680px) {
+    max-width: calc(var(--index) * 15);
+  }
+}
